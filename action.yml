@@ -1,0 +1,16 @@
+name: Get PR Submit token
+author: Sebastián Ramírez <tiangolo@gmail.com>
+description: Get a short-lived, repository-scoped PR Submit token.
+inputs:
+  url:
+    description: URL of the deployed PR Submit service.
+    default: https://pr-submit.fastapicloud.dev
+outputs:
+  token:
+    description: GitHub App installation token.
+runs:
+  using: docker
+  image: Dockerfile
+branding:
+  icon: git-commit
+  color: blue
