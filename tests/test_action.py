@@ -30,7 +30,6 @@ def test_action_gets_and_masks_token(
                 "repository": "fastapi/fastapi",
                 "permissions": {
                     "contents": "write",
-                    "issues": "write",
                     "pull_requests": "write",
                 },
             },
@@ -104,7 +103,6 @@ def test_action_main(
                 "repository": "fastapi/fastapi",
                 "permissions": {
                     "contents": "write",
-                    "issues": "write",
                     "pull_requests": "write",
                 },
             },

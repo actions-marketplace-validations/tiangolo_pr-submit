@@ -25,7 +25,6 @@ def github_transport(
                 "repository_ids": [claims.repository_id],
                 "permissions": {
                     "contents": "write",
-                    "issues": "write",
                     "pull_requests": "write",
                 },
             }
@@ -34,7 +33,6 @@ def github_transport(
                 "expires_at": "2026-08-06T15:00:00Z",
                 "permissions": {
                     "contents": "write",
-                    "issues": "write",
                     "metadata": "read",
                     "pull_requests": "write",
                 },
@@ -82,7 +80,6 @@ def test_create_token(
     assert response.repository == claims.repository
     assert response.permissions == {
         "contents": "write",
-        "issues": "write",
         "metadata": "read",
         "pull_requests": "write",
     }
