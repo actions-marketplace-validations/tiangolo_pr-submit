@@ -1,0 +1,31 @@
+[project]
+name = "pr-submit"
+version = "0.0.1"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi[standard]>=0.141.1",
+    "httpx>=0.28.1,<0.29.0",
+    "pydantic-settings>=2.14.2",
+    "pyjwt[crypto]>=2.13.0",
+    "pyyaml>=6.0.3",
+]
+
+[dependency-groups]
+dev = [
+    "httpx2>=2.9.1",
+    "prek>=0.4.12",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.0",
+    "ty>=0.0.65",
+    "zizmor>=1.29.0",
+]
+
+[tool.fastapi]
+entrypoint = "pr_submit.main:app"
+
+[tool.pytest.ini_options]
+addopts = "--cov=pr_submit --cov-report=term-missing --cov-fail-under=100"
+pythonpath = ["."]
+testpaths = ["tests"]
